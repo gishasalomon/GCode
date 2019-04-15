@@ -156,11 +156,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gisha\\Documents\\testci\\TestCI\\UITest_TestCI\\UITest_TestCI.csproj",
+      "projectUniqueName": "C:\\Users\\gisha\\Documents\\GitHub\\TestCI\\TestCI\\UITest_TestCI\\UITest_TestCI.csproj",
       "projectName": "UITest_TestCI",
-      "projectPath": "C:\\Users\\gisha\\Documents\\testci\\TestCI\\UITest_TestCI\\UITest_TestCI.csproj",
+      "projectPath": "C:\\Users\\gisha\\Documents\\GitHub\\TestCI\\TestCI\\UITest_TestCI\\UITest_TestCI.csproj",
       "packagesPath": "C:\\Users\\gisha\\Documents\\testci\\TestCI\\UITest_TestCI\\packages",
-      "outputPath": "C:\\Users\\gisha\\Documents\\testci\\TestCI\\UITest_TestCI\\obj\\",
+      "outputPath": "C:\\Users\\gisha\\Documents\\GitHub\\TestCI\\TestCI\\UITest_TestCI\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [

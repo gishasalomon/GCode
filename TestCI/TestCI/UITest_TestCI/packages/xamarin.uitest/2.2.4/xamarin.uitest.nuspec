@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Xamarin.UITest</id>
+    <version>2.2.4</version>
+    <title>Xamarin.UITest</title>
+    <authors>Microsoft</authors>
+    <owners>Xamarin</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <licenseUrl>http://developer.xamarin.com/guides/testcloud/uitest/license/</licenseUrl>
+    <projectUrl>http://developer.xamarin.com/guides/testcloud/uitest/</projectUrl>
+    <iconUrl>http://developer.xamarin.com/releases/testcloud/uitest/Images/uitest-logo32.png</iconUrl>
+    <description>UI Automation Framework for testing Android and iOS apps.</description>
+    <releaseNotes>id: 282bd6a6-4add-41f5-a95b-50e428892dd3
+title: Xamarin.UITest 2.2.4
+
+## Improvements
+
+* [iOS] Support Xcode 9.3 and iOS 11.3
+* [NUGET] Adds licence information and other details to nuget package</releaseNotes>
+    <copyright>© Microsoft Corporation. All rights reserved.</copyright>
+  </metadata>
+</package>

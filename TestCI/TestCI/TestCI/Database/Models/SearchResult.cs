@@ -7,7 +7,7 @@ namespace TestCI.Database.Models
 {
     public class SearchResult : INotifyPropertyChanged
     {
-        public string rstring="lklk";
+        private string rstring="";
         public string Resultstring {
             get { return rstring; }
             set {

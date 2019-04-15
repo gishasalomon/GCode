@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:design="clr-namespace:TestCI;assembly=TestCI"
+             xmlns:cv="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.CarouselView"
+             BindingContext="{x:Static design:ViewModelLocator.HomePageViewModel}"
+             x:Name="HomePage"
+             x:Class="TestCI.Views.HomePage"
+             Title="Home"
+             Icon="recents.png">
+    <ContentPage.Content>
+        <Grid RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height=".3*"/>
+                <RowDefinition Height=".7*"/>
+               
+            </Grid.RowDefinitions>
+            <cv:CarouselView x:Name="CarouselPromotion" ItemsSource="{Binding Path=BindingContext.PromotionModel, Source={x:Reference HomePage}}" HeightRequest="200">
+                <cv:CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Image Grid.RowSpan="2" Aspect="AspectFill" Source="{Binding ImageUrl}"/>
+                            <StackLayout Grid.Row="1" BackgroundColor="#80000000" Padding="12">
+                                <Label TextColor="White" Text="{Binding Name}" FontSize="16" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+                                <Button Text="All Words!" Clicked="OnButtonClicked"></Button>
+                                <SearchBar Placeholder="Search"></SearchBar>
+
+                            </StackLayout>
+                        </Grid>
+                    </DataTemplate>
+                </cv:CarouselView.ItemTemplate>
+            </cv:CarouselView>
+
+            <ListView x:Name="peopleList">
+                <ListView.ItemTemplate>
+
+                    <DataTemplate>
+                        <ViewCell >
+                            <Grid Padding="10" RowSpacing="10" ColumnSpacing="10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Column="1" 
+                       Text="{Binding Name}" 
+                       VerticalOptions="End"/>
+                                <Label Grid.Column="1"
+                       Grid.Row="1"
+                       VerticalOptions="Start"
+                       Text="{Binding Designation}"/>
+
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+
+        </Grid>
+
+
+    </ContentPage.Content>
+</ContentPage>

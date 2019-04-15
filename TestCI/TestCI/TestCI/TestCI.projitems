@@ -13,6 +13,7 @@
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\TabPage.xaml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)CustomRenderers\CustomizableLabel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Database\Models\SearchResult.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\SearchViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Testcodes.cs" />

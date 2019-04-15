@@ -3,6 +3,14 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using SQLite;
 using TestCI.Database;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
+using System.Collections.Specialized;
+using System.Net;
 
 [assembly: XamlCompilation (XamlCompilationOptions.Compile)]
 namespace TestCI
@@ -23,9 +31,13 @@ namespace TestCI
 
         protected override void OnStart ()
 		{
-			// Handle when your app starts
-		}
+            DbManager.DefaultInstance.DeleteAll();
+            AppCenter.Start("android=ea7f39d8-35db-4040-ae42-680e38c41b18;" ,
+                  typeof(Analytics), typeof(Crashes));
+                                 
+        }   
 
+        
 		protected override void OnSleep ()
 		{
 			// Handle when your app sleeps

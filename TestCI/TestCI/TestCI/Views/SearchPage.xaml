@@ -6,7 +6,7 @@
              BackgroundColor="Beige"
              Title="Search"
              bnb:BottomBarPageExtensions.TabColor="SpringGreen"
-             Icon="restaurants.png">
+             Icon="search.png">
     <ContentPage.Content>
        
             <StackLayout>

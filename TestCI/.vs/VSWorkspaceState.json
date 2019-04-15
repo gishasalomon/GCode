@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\TestCI",
+    "\\TestCI\\TestCI",
+    "\\TestCI\\TestCI\\TestCI",
+    "\\TestCI\\TestCI\\TestCI.Android",
+    "\\TestCI\\TestCI\\TestCI.Android\\bin",
+    "\\TestCI\\TestCI\\TestCI.Android\\bin\\Release",
+    "\\TestCI\\UITest_TestCI",
+    "\\TestCI\\UITest_TestCI\\bin",
+    "\\TestCI\\UITest_TestCI\\bin\\Release"
+  ],
+  "SelectedNode": "\\TestCI\\UITest_TestCI\\UITest_TestCI.csproj",
+  "PreviewInSolutionExplorer": false
+}

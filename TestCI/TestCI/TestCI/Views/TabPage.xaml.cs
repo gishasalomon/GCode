@@ -5,21 +5,13 @@ using TestCI.ViewModels;
 
 
 namespace TestCI
-{
-    
+{    
     public partial class TabPage 
-    {
-        
+    {      
         public TabPage()
 		{
 			InitializeComponent();
-            BindingContext = new Testcodes();
-           
-
+            BindingContext = new Testcodes();         
         }
-
-       
-
-
     }
 }

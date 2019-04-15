@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Xamarin.UITest</id>
+    <version>2.2.5</version>
+    <title>Xamarin.UITest</title>
+    <authors>Microsoft</authors>
+    <owners>Xamarin</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <licenseUrl>http://developer.xamarin.com/guides/testcloud/uitest/license/</licenseUrl>
+    <projectUrl>http://developer.xamarin.com/guides/testcloud/uitest/</projectUrl>
+    <iconUrl>http://developer.xamarin.com/releases/testcloud/uitest/Images/uitest-logo32.png</iconUrl>
+    <description>UI Automation Framework for testing Android and iOS apps.</description>
+    <releaseNotes>id: 04bfae41-17b3-4f41-82b4-550a0958af1f
+title: Xamarin.UITest 2.2.5
+
+## Improvements
+
+* [iOS] Xcode 9.4.1 support
+* [iOS] Fixes instability on iOS simulators
+* [Android] Android P support
+* [Android] Improve query performance on Andorid O devices
+* [Android] Fix local screenshots for newer devices
+* [Android] Fixes backslash issue on query
+* [Android] Fix Tap instability on Android P</releaseNotes>
+    <copyright>© Microsoft Corporation. All rights reserved.</copyright>
+  </metadata>
+</package>

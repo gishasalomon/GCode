@@ -20,7 +20,7 @@ namespace TestCI.ViewModels
             get { return searchsourcelist; }
             set {  }
         }
-        private string searchresult;
+       
         public ObservableCollection<SearchResult> sresultList;
         public ObservableCollection<SearchResult> SResultList
         {
@@ -41,42 +41,31 @@ namespace TestCI.ViewModels
             SearchCommand = new Command(Search);
             Testcodes tc = new Testcodes();
             searchsourcelist = tc.PplList;
-            sresultList = new ObservableCollection<SearchResult>() { new SearchResult { rstring = "View your results here" } };
-
+            sresultList = new ObservableCollection<SearchResult>() { new SearchResult { Resultstring = "" } };
+           
         }
         public ICommand SearchCommand { get; set; }
         void Search()
         {
+            sresultList.Clear();
             Search(keyword, searchsourcelist);
             OnPropertyChanged("Resultstring");
             OnPropertyChanged("SResultList");
         }
-        public void Search(string keyword1, ObservableCollection<DataModel> searchsourcelist)
+        public void Search(string keyword, ObservableCollection<DataModel> searchsourcelist)
         {
             SearchResult result = new SearchResult();
-            result.rstring = "Obtained results for " + keyword1;
-            //sresultList.Clear();
             sresultList.Add(result);
 
             foreach (var people in searchsourcelist)
             {
-                               
-                if (people.Name.Contains(keyword1)||people.Designation.Contains(keyword1)||people.Designation.Contains(keyword1))
+                string name = people.Name.ToLower();
+                string desgn = people.Designation.ToLower();
+                keyword=keyword.ToLower();
+                if (name.Contains(keyword)||desgn.Contains(keyword))
                 {
-                    searchresult = people.Name +" "+ people.Designation;
-                    result.rstring = searchresult;
-                    if (sresultList.Count > 0)
-                    {
-                        foreach (SearchResult item in sresultList)
-                        {
-                            if (item.rstring.Equals(result.rstring)) { return; }
-                            else
-                            {
-                                sresultList.Add(result);
-                                return;
-                            }
-                        }
-                    }
+                    result.Resultstring = people.Name +" "+ people.Designation;
+                    sresultList.Add(result);
                    
                 }
                 
@@ -84,8 +73,8 @@ namespace TestCI.ViewModels
 
             if (sresultList.Count == 1)
             {
-               // sresultList.Clear();
-                result.rstring = "No results for " + keyword1;
+               //sresultList.Clear();
+                result.Resultstring = "No results for " + keyword;
                 sresultList.Add(result);
             }
 

@@ -5,6 +5,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:bnb="clr-namespace:BottomBar.XamarinForms;assembly=BottomBar.XamarinForms"
     xmlns:local1="clr-namespace:TestCI.Views"
+    xmlns:common="clr-namespace:TestCI.CustomRenderers"
     bnb:BottomBarPageExtensions.TabColor="IndianRed">
     
    
@@ -12,7 +13,7 @@
     <ContentPage BackgroundColor="Beige"
         Title="About Us"
         bnb:BottomBarPageExtensions.TabColor="IndianRed"
-        Icon="favorites.png">
+        Icon="friends.png">
         <StackLayout>
             
             <ListView x:Name="PeopleListView"
@@ -22,13 +23,15 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <StackLayout Orientation="Vertical">
-                            <Label Text="{Binding Id}" IsEnabled="False"/>
-                            <Label Text="{Binding Name}" />
-                            <Label Text="{Binding Designation}"/>
-                            <Label Text="{Binding Country}"/>
+                      <AbsoluteLayout AbsoluteLayout.LayoutBounds="0.5,0.5,AutoSize,AutoSize">
+                                <StackLayout Spacing="0" AbsoluteLayout.LayoutBounds="0.5,0.5,AutoSize,AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional" Orientation="Vertical">
+                                    <common:CustomizableLabel Text="{Binding Id}" IsEnabled="False" FontType="HelveticaNeueMedium" FontColor="Red"/>
+                                    <common:CustomizableLabel Text="{Binding Name}" />
+                                    <common:CustomizableLabel Text="{Binding Designation}"/>
+                                    <common:CustomizableLabel Text="{Binding Country}"/>
                         </StackLayout>
-                    </ViewCell>
+                            </AbsoluteLayout>
+                        </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
@@ -40,8 +43,8 @@
         bnb:BottomBarPageExtensions.TabColor="DarkSeaGreen"
         Icon="favorites.png">
         <StackLayout>
-            <Entry x:Name="fname" Text="{Binding Fullname, Mode=OneWay}" />
-            <Entry x:Name="designtn" Text="{Binding Designation, Mode=OneWay}" />
+            <Entry x:Name="fname" Placeholder="Firstname" Text="{Binding Firstname, Mode=OneWay}" />
+            <Entry x:Name="designtn" Placeholder="Designation" Text="{Binding Designation, Mode=OneWay}" />
             
             <Button Text="Concatenate names" Command="{Binding ConcatenateCommand}" />
         <Label

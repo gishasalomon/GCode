@@ -44,7 +44,7 @@ namespace TestCI.Views
             
             Testcodes tc = new Testcodes();
             searchsourcelist = tc.PplList;
-            sresultList = new ObservableCollection<SearchResult>() { new SearchResult { rstring = "View your results here" } };
+            sresultList = new ObservableCollection<SearchResult>() { new SearchResult { Resultstring = "View your results here" } };
 
             searchViewModel.Search(keyword, searchsourcelist);
              

@@ -16,7 +16,7 @@ namespace TestCI.Database
 
         public DbManager()
         {
-            _dbConnection.CreateTable<DataModel>();
+           _dbConnection.CreateTable<DataModel>();
            // _dbConnection.CreateTable<PromotionModel>();
 
         }
@@ -29,6 +29,7 @@ namespace TestCI.Database
 
         public void InsertDatamodel()
         {
+           
             DataModel item1 = new DataModel();  
             item1.Name = "Gisha";
             item1.Country = "India";
@@ -106,9 +107,9 @@ namespace TestCI.Database
                 InsertDatamodel();
         }
 
-        public void DeleteItem(DataModel item)
+        public void DeleteAll()
         {
-            _dbConnection.Delete(item);
+            _dbConnection.DropTable<DataModel>();
         }
 
         public DataModel GetItem(long? id, Guid guid = default(Guid))
