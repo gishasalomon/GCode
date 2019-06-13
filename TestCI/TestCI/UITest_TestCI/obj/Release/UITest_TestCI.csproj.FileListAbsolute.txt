@@ -1,6 +1,0 @@
-C:\Users\gisha\Documents\testci\TestCI\UITest_TestCI\bin\Release\UITest_TestCI.dll
-C:\Users\gisha\Documents\testci\TestCI\UITest_TestCI\bin\Release\nunit.framework.dll
-C:\Users\gisha\Documents\testci\TestCI\UITest_TestCI\bin\Release\Xamarin.UITest.dll
-C:\Users\gisha\Documents\testci\TestCI\UITest_TestCI\obj\Release\UITest_TestCI.csproj.CoreCompileInputs.cache
-C:\Users\gisha\Documents\testci\TestCI\UITest_TestCI\obj\Release\UITest_TestCI.csproj.CopyComplete
-C:\Users\gisha\Documents\testci\TestCI\UITest_TestCI\obj\Release\UITest_TestCI.dll
